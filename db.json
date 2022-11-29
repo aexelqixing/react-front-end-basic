@@ -9,10 +9,11 @@
       "streetAddress": "1083 Pleasant St",
       "businessPhone": "",
       "highNeeds": true,
-      "hours": 25.5,
+      "hours": 35.5,
       "city": "Worcester",
       "state": "MA",
-      "zipcode": "01879"
+      "zipcode": "01879",
+      "status": "pending"
     },
     {
       "name": "Rianna Santra",
@@ -23,7 +24,8 @@
       "businessPhone": "",
       "id": 2,
       "highNeeds": false,
-      "hours": 15
+      "hours": 15,
+      "status": "approved"
     },
     {
       "name": "estupido",
@@ -33,8 +35,9 @@
       "streetAddress": "999 no-brain-cells street",
       "businessPhone": "",
       "id": 3,
-      "highNeeds": false,
-      "hours": 32
+      "highNeeds": true,
+      "hours": 32,
+      "status": "completed"
     },
     {
       "name": "CHICKEN ",
@@ -43,14 +46,15 @@
       "businessName": "Sus 101",
       "streetAddress": "347398846839 MayFlower Drive ",
       "businessPhone": "",
-      "highNeeds": true,
+      "highNeeds": false,
       "id": 5,
-      "hours": 15
+      "hours": 15,
+      "status": "not approved"
     },
     {
       "name": "The Rock",
       "day": "04/01/2022 6:00 PM",
-      "proposal": "Be so sleep deprived you don't know what sleep deprivation is",
+      "proposal": "be sleep deprived",
       "businessName": "mamamamamms",
       "streetAddress": "1234567890 sleepydude dr",
       "city": "Land of Lord Farquad",
@@ -59,32 +63,53 @@
       "businessPhone": "",
       "highNeeds": false,
       "id": 6,
-      "hours": 0
+      "hours": 0,
+      "status": "not approved"
     },
     {
       "name": "sjankas",
       "day": "05/06/2007 6:56 AM",
-      "proposal": "asdsandjk",
+      "proposal": "working on my stem project",
       "businessName": "asdnalsndksa",
       "streetAddress": "asdnkjsankjd",
       "businessPhone": "asdkasdmk",
-      "highNeeds": false,
-      "hours": 0,
-      "id": 7
+      "highNeeds": true,
+      "hours": 16405,
+      "id": 7,
+      "status": "pending",
+      "city": "absxa",
+      "state": "asnx nams",
+      "zipcode": "asxas"
     },
     {
       "name": "Los Estudiantes",
       "day": "11/08/2022 1:23 PM",
       "proposal": "Running Away From A Fire",
       "businessName": "MAMS",
-      "streetAddress": "85 Prescott Street",
+      "streetAddress": "85 Prescott Strett",
       "city": "Worcester",
       "state": "MA",
       "zipcode": "01879",
       "businessPhone": "",
+      "highNeeds": true,
+      "hours": 12000,
+      "id": 8,
+      "status": "pending"
+    },
+    {
+      "name": "a",
+      "day": "b",
+      "proposal": "c",
+      "businessName": "d",
+      "streetAddress": "e",
+      "city": "f",
+      "state": "g",
+      "zipcode": "h",
+      "businessPhone": "",
       "highNeeds": false,
       "hours": 0,
-      "id": 8
+      "status": "pending",
+      "id": 9
     }
   ]
 }

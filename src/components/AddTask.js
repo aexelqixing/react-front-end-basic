@@ -13,6 +13,7 @@ const AddTask = ({ onAdd }) => {
     const [businessPhone, setPhone] = useState('');
     const [highNeeds, setHighNeeds] = useState(false)
     const [hours, setHours] = useState(0)
+    const [status, setStatus] = useState('requested')
 
     const onSubmit = (e) => {
         e.preventDefault()
@@ -22,7 +23,7 @@ const AddTask = ({ onAdd }) => {
             return
         }
         
-        onAdd({ name, day, proposal, businessName, streetAddress, city, state, zipcode, businessPhone, highNeeds, hours })
+        onAdd({ name, day, proposal, businessName, streetAddress, city, state, zipcode, businessPhone, highNeeds, hours, status })
 
         setName('')
         setDay('')
@@ -35,6 +36,7 @@ const AddTask = ({ onAdd }) => {
         setPhone('')
         setHighNeeds(false)
         setHours(0)
+        setStatus('requested')
     }
 
   return (

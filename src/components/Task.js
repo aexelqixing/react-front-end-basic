@@ -16,6 +16,7 @@ const Task = ({ task, onDelete, onToggle, onAddHours, onEditDesc }) => {
             /> 
         </h3>
         <p>Start Date: {task.day}</p>
+        <p><span className={`status-all ${task.status === 'not approved' ? 'rejected' : task.status}`}>{task.status}</span></p>
         {showDescription && <Description task={ task } onDelete = {onDelete} onAddHours = {onAddHours} onEditDesc={onEditDesc}/>}
     </div>
   )

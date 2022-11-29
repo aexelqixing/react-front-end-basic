@@ -16,8 +16,9 @@ const Description = ({ task, onDelete, onAddHours, onEditDesc }) => {
       <h3>High Needs: {task.highNeeds ? 'Yes' : 'No'}</h3>
       <h3 className="hours">Hours: {task.hours}</h3>
       <Button bgColor="#bfd200" textColor="black" text={showEditDesc ? "Close Editing" : "Edit Description"} onClick={() => setShowEditDesc(!showEditDesc)}/>
-      <Button bgColor="#480ca8" text={showAddHours ? "Close Hours" : "Edit Hours"} onClick={() => setShowAddHours(!showAddHours)} />
+      {(task.status === 'approved') && <Button bgColor="#480ca8" text={showAddHours ? "Close Hours" : "Edit Hours"} onClick={() => setShowAddHours(!showAddHours)} />}
       <Button bgColor="#d00000" text="Delete" onClick={() => onDelete(task.id)} />
+
       {showAddHours && <AddHours task = {task} onAddHours={onAddHours}/>}
       {showEditDesc && <EditTask task = {task} onEdit={onEditDesc}/>}
     </div>

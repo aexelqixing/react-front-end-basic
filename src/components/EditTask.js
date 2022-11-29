@@ -12,6 +12,7 @@ const EditTask = ({ task, onEdit }) => {
     const [zipcode, setZipCode] = useState(task.zipcode);
     const [businessPhone, setPhone] = useState(task.businessPhone);
     const [highNeeds, setHighNeeds] = useState(task.highNeeds)
+    const [status, setStatus] = useState('requested')
 
     const onSubmit = (e) => {
         e.preventDefault()
@@ -21,7 +22,7 @@ const EditTask = ({ task, onEdit }) => {
             return
         }
 
-        onEdit(task.id, name, day, proposal, businessName, streetAddress, city, state, zipcode, businessPhone, highNeeds)
+        onEdit(task.id, name, day, proposal, businessName, streetAddress, city, state, zipcode, businessPhone, highNeeds, status)
 
         setName(name)
         setDay(day)
@@ -33,6 +34,7 @@ const EditTask = ({ task, onEdit }) => {
         setZipCode(zipcode)
         setPhone(businessPhone)
         setHighNeeds(highNeeds)
+        setStatus('requested')
     }
 
     return (

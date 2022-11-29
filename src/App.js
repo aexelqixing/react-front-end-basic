@@ -80,10 +80,10 @@ function App() {
   setTasks(tasks.map((task) => task.id === id ? { ...task, hours: parseFloat(data.hours)} : task))
   }
 
-  const editTask = async (id, newName, newDay, newProposal, newBusinessName, newStreetAddress, newCity, newState, newZipCode, newBusinessPhone, newHighNeeds) => {
+  const editTask = async (id, newName, newDay, newProposal, newBusinessName, newStreetAddress, newCity, newState, newZipCode, newBusinessPhone, newHighNeeds, newStatus) => {
     const taskToEdit = await fetchTask(id)
     const updTask = { ...taskToEdit, name: newName, day: newDay, proposal: newProposal, businessName: newBusinessName, streetAddress: newStreetAddress,
-    city: newCity, state: newState, zipcode: newZipCode, businessPhone: newBusinessPhone, highNeeds: newHighNeeds}
+    city: newCity, state: newState, zipcode: newZipCode, businessPhone: newBusinessPhone, highNeeds: newHighNeeds, status: newStatus}
 
     const res = await fetch(`http://localhost:4000/tasks/${id}`, {
       method: 'PUT',
@@ -96,7 +96,7 @@ function App() {
     const data = await res.json()
 
     setTasks(tasks.map((task) => task.id === id ? { ...task, name: data.name, day: data.day, proposal: data.proposal, businessName: data.businessName, streetAddress: data.streetAddress,
-      city: data.city, state: data.state, zipcode: data.zipcode, businessPhone: data.businessPhone, highNeeds: data.highNeeds} : task))
+      city: data.city, state: data.state, zipcode: data.zipcode, businessPhone: data.businessPhone, highNeeds: data.highNeeds, status: data.status} : task))
   }
 
   // Delete Task
